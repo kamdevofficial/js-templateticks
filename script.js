@@ -75,3 +75,9 @@ const renderCart1 = () => {
 
 // execute renderCart1
 renderCart1();
+
+// * Method 2 : using Template Literals ! Magical way *
+
+const renderCart2 = () => {
+    cartContent = `<h2>Cart - Example 2</h2>`
+};
