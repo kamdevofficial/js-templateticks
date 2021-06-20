@@ -72,3 +72,6 @@ const renderCart1 = () => {
     // append total
     appendElement(firstCartDOM, total);
 }
+
+// execute renderCart1
+renderCart1();
