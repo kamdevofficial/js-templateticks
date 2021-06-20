@@ -100,4 +100,12 @@ const renderCart2 = () => {
    )}</span>
   </div>
   `;
+
+  // append the cart content one time !
+  secondCartDOM.innerHTML = cartContent;
 };
+
+// execute renderCart2
+renderCart2();
+
+//
