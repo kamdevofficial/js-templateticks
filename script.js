@@ -16,3 +16,14 @@ const products = [{
     qty: 7,
 },
 ];
+
+// * Method 1 : the createElement way *
+
+// those 2 arrow functions to make creating & appending codeless
+const makeElement = (element) => {
+    elem = document.createElement(element);
+    return elem;
+};
+const appendElement = (parent, element) => {
+    parent.appendChild(element);
+};
