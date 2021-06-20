@@ -27,3 +27,11 @@ const makeElement = (element) => {
 const appendElement = (parent, element) => {
     parent.appendChild(element);
 };
+
+const renderCart1 = () => {
+    firstCartDOM.innerHTML = "";
+    title = createElement("h2");
+    title.innerText = "My Cart - createElement example";
+    // append title
+    appendElement(firstCartDOM, title);
+}
