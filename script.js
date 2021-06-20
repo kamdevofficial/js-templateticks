@@ -52,4 +52,23 @@ const renderCart1 = () => {
     // append listgroup
     appendElement(firstCartDOM, listgroup);
 
+    // show total quantity, price inside a total element
+    total = createElement("div");
+    totalqty = createElement("span");
+    totalprice = createElement("span");
+    breakelement = createElement("br");
+
+    totalqty.innerText =
+        "Quantity : " +
+        products.reduce((acc, product) => acc + product.qty, 0) +
+        "item(s)";
+    totalprice.innerText =
+        "You will pay : $" +
+        products.reduce((acc, product) => acc + product.price, 0);
+    appendElement(total, totalqty);
+    appendElement(total, breakelement);
+    appendElement(total, totalprice);
+
+    // append total
+    appendElement(firstCartDOM, total);
 }
