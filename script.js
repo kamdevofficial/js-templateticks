@@ -79,5 +79,13 @@ renderCart1();
 // * Method 2 : using Template Literals ! Magical way *
 
 const renderCart2 = () => {
-    cartContent = `<h2>Cart - Example 2</h2>`
+    cartContent = `<h2>Cart - Example 2</h2>
+    <ul>
+    ${products
+      .map(
+        (product) =>
+          `<li>${product.name} - $${product.price} - ${product.qty} item(s)</li>`
+      )
+      .join("")}
+  </ul>`;
 };
