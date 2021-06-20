@@ -34,4 +34,22 @@ const renderCart1 = () => {
     title.innerText = "My Cart - createElement example";
     // append title
     appendElement(firstCartDOM, title);
+
+    // show products inside an unordered-list items
+    listgroup = createElement("ul");
+    products.map((product) => {
+        listgroupitem = createElement("li");
+        listgroupitem.innerText =
+            product.name +
+            " - " +
+            "$" +
+            product.price +
+            " - " +
+            product.qty +
+            " item(s)";
+        appendElement(listgroup, listgroupitem);
+    });
+    // append listgroup
+    appendElement(firstCartDOM, listgroup);
+
 }
