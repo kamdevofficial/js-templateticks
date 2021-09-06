@@ -30,15 +30,15 @@ const appendElement = (parent, element) => {
 
 const renderCart1 = () => {
     firstCartDOM.innerHTML = "";
-    title = createElement("h2");
+    title = makeElement("h2");
     title.innerText = "My Cart - createElement example";
     // append title
     appendElement(firstCartDOM, title);
 
     // show products inside an unordered-list items
-    listgroup = createElement("ul");
+    listgroup = makeElement("ul");
     products.map((product) => {
-        listgroupitem = createElement("li");
+        listgroupitem = makeElement("li");
         listgroupitem.innerText =
             product.name +
             " - " +
@@ -53,10 +53,10 @@ const renderCart1 = () => {
     appendElement(firstCartDOM, listgroup);
 
     // show total quantity, price inside a total element
-    total = createElement("div");
-    totalqty = createElement("span");
-    totalprice = createElement("span");
-    breakelement = createElement("br");
+    total = makeElement("div");
+    totalqty = makeElement("span");
+    totalprice = makeElement("span");
+    breakelement = makeElement("br");
 
     totalqty.innerText =
         "Quantity : " +
